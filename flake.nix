@@ -8,13 +8,12 @@
     stylix.url = "github:nix-community/stylix/release-25.05";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
-
-  outputs = 
-    { 
-      self,
-      nixpkgs,
-      home-manager,
-      ... 
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    ... 
     }@inputs:
     let
       username = "swedish";
@@ -28,7 +27,10 @@
       nixosConfigurations = {
         swedishos = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ (import ./hosts/swedishos) ];
+          modules = [
+            stylix.nixosModules.stylix
+            (import ./hosts/swedishos)
+          ];
           specialArgs = {
             host = "SwedishOs";
             inherit self inputs username;

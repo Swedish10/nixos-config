@@ -27,10 +27,7 @@
         plugin = comment-nvim;
 	  config = toLua "require(\"Comment\").setup()";
       }
-      {
-        plugin = oil-nvim;
-	  config = toLua "require(\"oil\").setup()";
-      }
+
       {
         plugin = lualine-nvim;
 	  config = toLua "require(\"lualine\").setup()";
@@ -40,6 +37,10 @@
       {
         plugin = nvim-lspconfig;
   	  config = toLuaFile ./nvim/plugins/lsp.lua;
+      }
+      {
+        plugin = oil-nvim;
+	  config = toLuaFile ./nvim/plugins/oil.lua;
       }
       {
         plugin = nvim-cmp;

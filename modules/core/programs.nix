@@ -7,7 +7,8 @@
   environment.systemPackages = with pkgs; [
     kdePackages.kate
     git
-    vim
+    neovim
+    jq
   ];
 }
 
