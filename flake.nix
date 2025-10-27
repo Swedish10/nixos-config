@@ -25,14 +25,14 @@
     in
     {
       nixosConfigurations = {
-        swedishos = nixpkgs.lib.nixosSystem {
+        schooner = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
             stylix.nixosModules.stylix
-            (import ./hosts/swedishos)
+            (import ./hosts/schooner)
           ];
           specialArgs = {
-            host = "SwedishOs";
+            host = "Schooner";
             inherit self inputs username;
           };
         };

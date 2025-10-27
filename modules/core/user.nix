@@ -20,7 +20,7 @@
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports =
-        if (host == "swedishos") then
+        if (host == "SwixSchooner") then
           [ ./../home/default.nix ]
        # else if (host == "option2") then
        #  [ ./../home/default.server.nix ]

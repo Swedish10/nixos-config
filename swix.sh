@@ -28,7 +28,7 @@ echo "SwixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
 # TODO Get nh for better rebuild
-sudo nixos-rebuild switch --flake ".#swedishos" &>swixos-switch.log || (cat swixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch --flake ".#schooner" &>swixos-switch.log || (cat swixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations --json | jq '.[] | select (.current == true) | "Swix-v1-g\(.generation)-NixOs\(.nixosVersion)"')
