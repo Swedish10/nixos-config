@@ -6,7 +6,7 @@ set -e
 
 case "$1" in 
     "") echo "No host specified" && exit 1 ;;
-    *) echo "" ;;
+    *) echo "Reloading Host: $1" ;;
 esac
 
 # Edit your config
@@ -16,11 +16,11 @@ esac
 pushd ~/swix
 
 # Early return if no changes were detected
-if git diff --quiet; then
-    echo "No changes detected, exiting."
-    popd
-    exit 0
-fi
+# if git diff --quiet; then
+#     echo "No changes detected, exiting."
+#     popd
+#     exit 0
+# fi
 
 # Autoformat your nix files
 #alejandra . &>/dev/null \
