@@ -36,6 +36,17 @@
             inherit self inputs username;
           };
         };
+        sloop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            stylix.nixosModules.stylix
+            (import ./hosts/sloop)
+          ];
+          specialArgs = {
+            host = "sloop";
+            inherit self inputs username;
+          };
+        };
       }; 
     };
 }

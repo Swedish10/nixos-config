@@ -4,6 +4,11 @@
 
 set -e
 
+case "$1" in 
+    "") echo "No host specified" && exit 1 ;;
+    *) echo "" ;;
+esac
+
 # Edit your config
 #$EDITOR configuration.nix
 
@@ -11,7 +16,7 @@ set -e
 pushd ~/swix
 
 # Early return if no changes were detected
-if git diff --quiet '*.nix'; then
+if git diff --quiet; then
     echo "No changes detected, exiting."
     popd
     exit 0
@@ -22,13 +27,13 @@ fi
 #  || ( alejandra . ; echo "formatting failed!" && exit 1)
 
 # Shows your changes
-git diff -U0 '*.nix'
+git diff
 
 echo "SwixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
 # TODO Get nh for better rebuild
-sudo nixos-rebuild switch --flake ".#schooner" &>swixos-switch.log || (cat swixos-switch.log | grep --color error && exit 1)
+sudo nixos-rebuild switch --flake ".#$1" &>swixos-switch.log || (cat swixos-switch.log | grep --color error && exit 1)
 
 # Get current generation metadata
 current=$(nixos-rebuild list-generations --json | jq '.[] | select (.current == true) | "Swix-v1-g\(.generation)-NixOs\(.nixosVersion)"')
