@@ -32,7 +32,7 @@
             (import ./hosts/schooner)
           ];
           specialArgs = {
-            host = "Schooner";
+            host = "schooner";
             inherit self inputs username;
           };
         };
@@ -58,6 +58,6 @@
 #          modules = [ (import ./hosts/hostname) ];
 #          specialArgs = {
 #            host = "hostname";
-#            inherit self inputs username:
+#            inherit self inputs username;
 #          };
 #        };
