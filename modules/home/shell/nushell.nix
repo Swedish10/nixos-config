@@ -19,7 +19,7 @@
         alias gs = git status
 
         # ls Aliases
-        alias lla = ls -ls
+        alias lla = ls -la
         alias la = ls -a
         alias ll = ls -l
         alias l = ls
