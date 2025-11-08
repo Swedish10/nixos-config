@@ -36,7 +36,7 @@
         alias n = nvim
         alias dots = cd ~/.dotfiles
 
-        oh-my-posh init nun --config ~/.config/oh-my-posh/config.json
+        oh-my-posh init nu --config ~/.config/oh-my-posh/config.json
       '';
     };
 
