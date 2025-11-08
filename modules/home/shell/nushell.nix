@@ -37,7 +37,10 @@
         alias dots = cd ~/.dotfiles
 
         # Fun aliases
-        alias lol = fortune | cowsay -f dragon
+        def lol [] {
+          $"fortune | cowsay -f dragon"
+        }
+        # alias lol = fortune | cowsay -f dragon
 
         oh-my-posh init nu --config ~/.config/oh-my-posh/config.json
       '';
