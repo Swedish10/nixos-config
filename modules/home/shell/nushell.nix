@@ -38,7 +38,7 @@
 
         # Fun aliases
         def lol [] {
-          $"fortune | cowsay -f dragon"
+          fortune | cowsay -f dragon
         }
         # alias lol = fortune | cowsay -f dragon
 
