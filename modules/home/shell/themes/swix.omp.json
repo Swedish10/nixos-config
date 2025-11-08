@@ -18,18 +18,8 @@
             "display_host": true
           },
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u250c\u2501\u2501\u2501(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2864\uFE4F\uFE4F(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
           "type": "session"
-        },
-        {
-          "foreground": "yellow",
-          "properties": {
-            "fetch_version": false,
-            "fetch_virtual_env": true
-          },
-          "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
-          "type": "python"
         },
         {
           "foreground": "#dab984",
@@ -38,13 +28,13 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2501[</>{{ .Path }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\uFE4F[</>{{ .Path }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
           "type": "path"
         },
         {
           "foreground": "#36ca9b",
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2501[</>{{ .HEAD }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\uFE4F[</>{{ .HEAD }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
           "type": "git",
           "properties": {
             "branch_icon": " "
@@ -85,7 +75,7 @@
           "properties": {
             "time_format": "Jan-02"
           },
-          "template": "{{ .CurrentDate | date .Format }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]󰼮[</>"
+          "template": "{{ .CurrentDate | date .Format }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]\uFE4F[</>"
         },
         {
           "foreground": "#c27132",
@@ -106,7 +96,7 @@
         {
           "foreground": "#3578ab",
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2514\uFE4F</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132> 󰀱 </>{{ end }} ",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2823\u2824\u281C</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132>󰀱 </>{{ end }} ",
           "type": "text"
         }
       ],
