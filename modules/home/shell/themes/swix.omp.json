@@ -18,7 +18,7 @@
             "display_host": true
           },
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u250c󰼮󰼮󰼮(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u250c\u2501\u2501\u2501(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
           "type": "session"
         },
         {
@@ -38,13 +38,13 @@
             "style": "full"
           },
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>󰼮[</>{{ .Path }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2501[</>{{ .Path }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
           "type": "path"
         },
         {
           "foreground": "#36ca9b",
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>󰼮[</>{{ .HEAD }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2501[</>{{ .HEAD }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
           "type": "git",
           "properties": {
             "branch_icon": " "
@@ -75,7 +75,7 @@
             "style": "round"
           },
           "style": "plain",
-          "template": " {{ .FormattedMs }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)󰼮[</>",
+          "template": " {{ .FormattedMs }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)\uFE4F[</>",
           "type": "executiontime"
         },
         {
@@ -106,7 +106,7 @@
         {
           "foreground": "#3578ab",
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2514󰼮</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132> 󰀱 </>{{ end }} ",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2514\uFE4F</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132> 󰀱 </>{{ end }} ",
           "type": "text"
         }
       ],
