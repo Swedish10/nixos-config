@@ -18,7 +18,7 @@
             "display_host": true
           },
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2864\uFE4F\uFE4F(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2844\uFE4F\uFE4F(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
           "type": "session"
         },
         {
@@ -96,7 +96,7 @@
         {
           "foreground": "#3578ab",
           "style": "plain",
-          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2823\u2824\u281C</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132>󰀱 </>{{ end }} ",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2823\u2824\u2850</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132>󰀱 </>{{ end }} ",
           "type": "text"
         }
       ],
