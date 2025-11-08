@@ -1,0 +1,117 @@
+{
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#585858",
+    "template": " /{{ .Folder }} > "
+  },
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#c27132",
+          "foreground_templates": [
+            "{{ if .Root }}lightRed{{ end }}"
+          ],
+          "properties": {
+            "display_host": true
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u250c󰼮󰼮󰼮(</>{{ .UserName }}{{ if .Root }} 󰞄 {{ else }} 󰻈 {{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)</>",
+          "type": "session"
+        },
+        {
+          "foreground": "yellow",
+          "properties": {
+            "fetch_version": false,
+            "fetch_virtual_env": true
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>-[</>\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }}{{ end }}{{ .Full }}{{ end }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "type": "python"
+        },
+        {
+          "foreground": "#dab984",
+          "properties": {
+            "folder_separator_icon": "<#c0c0c0>/</>",
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>󰼮[</>{{ .Path }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "type": "path"
+        },
+        {
+          "foreground": "#36ca9b",
+          "style": "plain",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>󰼮[</>{{ .HEAD }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>",
+          "type": "git",
+          "properties": {
+            "branch_icon": " "
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#3578ab",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " (<{{ if gt .Code 0 }}red{{else}}green{{ end }}>{{ if gt .Code 0 }}\uea76{{else}}\uf42e{{ end }}</> ",
+          "type": "status"
+        },
+        {
+          "foreground": "#36ca9d",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}red{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true,
+            "style": "round"
+          },
+          "style": "plain",
+          "template": " {{ .FormattedMs }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>)󰼮[</>",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#dab984",
+          "type": "time",
+          "style": "plain",
+          "properties": {
+            "time_format": "Jan-02"
+          },
+          "template": "{{ .CurrentDate | date .Format }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]󰼮[</>"
+        },
+        {
+          "foreground": "#c27132",
+          "type": "time",
+          "style": "plain",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": "{{ .CurrentDate | date .Format }}<{{ if .Root }}green{{ else }}#3578ab{{ end }}>]</>"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#3578ab",
+          "style": "plain",
+          "template": "<{{ if .Root }}green{{ else }}#3578ab{{ end }}>\u2514󰼮</>{{ if .Root }}<lightRed>#</>{{ else }}<#c27132> 󰀱 </>{{ end }} ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}

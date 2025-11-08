@@ -7,6 +7,10 @@
 }:
 {
   home.packages = with pkgs; [
+    # Shell
+    nushell
+    oh-my-posh
+
     # Environment shit
     wezterm
     wget
@@ -24,6 +28,7 @@
     ripgrep
     cargo
     rustc
+    gitui
     # python3
     # python3Packages.pip
     # (writeShellScriptBin "install-pip-packages" '' # This script does not run, yet.

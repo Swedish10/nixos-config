@@ -10,9 +10,6 @@
 {
   imports =
     [ inputs.home-manager.nixosModules.home-manager ];
-    #++ [ ./../../roles/default.nix ]
-    #++ [ ./sops.nix ]
-  #++ [ ./../../variables.nix ];
 
   home-manager = {
     useUserPackages = true;
@@ -57,7 +54,7 @@
       #"input"
       #"dialout"
     ];
-    shell = pkgs.nushell;
+    shell = pkgs.bash;
   };
   nix.settings.allowed-users = [ "${username}" ];
 }
