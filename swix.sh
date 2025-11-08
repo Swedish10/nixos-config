@@ -39,7 +39,7 @@ sudo nixos-rebuild switch --flake ".#$1" &>swixos-switch.log || (cat swixos-swit
 current=$(nixos-rebuild list-generations --json | jq '.[] | select (.current == true) | "Swix-v1-g\(.generation)-NixOs\(.nixosVersion)"')
 
 # Commit all changes with the generation metadata
-git commit -am "$current"
+git commit -am "Machine: $1, $current"
 
 # Back to where you were
 popd
