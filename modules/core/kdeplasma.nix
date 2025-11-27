@@ -12,5 +12,7 @@
     layout = "us";
     variant = "";
   };
+
+  enviroment.systemPackages = [ pkgs.kdePackages.kate ];
 }
 

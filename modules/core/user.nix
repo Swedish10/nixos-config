@@ -11,8 +11,8 @@
       imports =
         if (host == "SwixSchooner") then
           [ ./../home/default.nix ]
-       # else if (host == "option2") then
-       #  [ ./../home/default.server.nix ]
+        else if (host == "skiff1") then
+         [ ./../home/default.server.nix ]
        # else if (host == "option3") then
        #   [ ./../home/default.server.nix ]
        # else if (host == "option4") then

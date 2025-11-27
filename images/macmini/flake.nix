@@ -14,14 +14,14 @@
 			hardware.enableRedistributableFirmware = true;
 			nixpkgs.config.allowUnfree = true;
 			boot.kernelModules = [ "b43" ];
-			boot.blacklistedModules = [ "wl" ];
+			boot.blacklistedKernelModules = [ "wl" ];
 			networking.enableB43Firmware = true;
-			enviroment.systemPackages = [
+			environment.systemPackages = [
 			  pkgs.neovim
 			  pkgs.git
 			];
 			nix.settings.experimental-features = [ "nix-command" "flakes" ];
-			isoImage.squashfsCompression = "gzip -Xcompression-level 1"
+			isoImage.squashfsCompression = "gzip -Xcompression-level 1";
 		  })
 		];
 	  };

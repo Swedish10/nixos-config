@@ -47,6 +47,14 @@
             inherit self inputs username;
           };
         };
+        skiff1 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ (import ./hosts/firstfleet/skiff1) ];
+          specialArgs = {
+            host = "skiff1";
+            inherit self inputs username;
+          };
+        };
       }; 
     };
 }
