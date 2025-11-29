@@ -4,6 +4,7 @@
     git
     neovim
     jq
+    tmux
   ];
 }
 

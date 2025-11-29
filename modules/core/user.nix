@@ -6,6 +6,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs username host; };
     users.${username} = {
       imports =

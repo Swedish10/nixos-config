@@ -12,7 +12,6 @@
     self,
     nixpkgs,
     home-manager,
-    stylix,
     ... 
     }@inputs:
     let
@@ -28,7 +27,7 @@
         schooner = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            stylix.nixosModules.stylix
+            inputs.stylix.nixosModules.stylix
             (import ./hosts/schooner)
           ];
           specialArgs = {
@@ -39,7 +38,7 @@
         sloop = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            stylix.nixosModules.stylix
+            inputs.stylix.nixosModules.stylix
             (import ./hosts/sloop)
           ];
           specialArgs = {
