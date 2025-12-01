@@ -11,4 +11,10 @@
       }
     ];
   };
+
+  environment.systemPackages = [
+    pkgs.terminus_font
+    pkgs.unifont
+    pkgs.pango
+  ];
 }
