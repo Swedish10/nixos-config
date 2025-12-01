@@ -1,8 +1,14 @@
 { pkgs, config, ... }:
 {
-  i18n.defaultLocale = "en_US.UTF-8";
-  console = {
-    earlySetup = true;
-    keyMap = "us";
+  services.kmscon.enable = true;
+
+  services.kmscon = {
+    hwRender = true;
+    fonts = [
+      {
+        name = "Source Code Pro";
+        package = pkgs.source-code-pro;
+      }
+    ];
   };
 }
