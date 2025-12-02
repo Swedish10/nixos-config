@@ -6,8 +6,8 @@
     hwRender = true;
     fonts = [
       {
-        name = "Source Code Pro";
-        package = pkgs.source-code-pro;
+        name = "JetBrainsMono Nerd Font Mono";
+        package = pkgs.nerd-fonts.jetbrains-mono;
       }
     ];
   };
