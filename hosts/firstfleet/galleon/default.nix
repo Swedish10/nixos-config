@@ -3,6 +3,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware.nix
+      ../fleetmaster.nix
       ../../../modules/core/default.server.nix
     ];
 
@@ -10,10 +11,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "swix-skiff1"; # Define your hostname.
+  networking.hostName = "swix-galleon"; # Define your hostname.
   # Pick only one of the below networking options.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  networking.interfaces.enp2s0f0.ipv4.addresses = [{
+    address = "192.168.1.10";
+    prefixLength = 24;
+  }];
+
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

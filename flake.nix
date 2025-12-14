@@ -46,11 +46,33 @@
             inherit self inputs username;
           };
         };
-        skiff1 = nixpkgs.lib.nixosSystem {
+        galleon = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ (import ./hosts/firstfleet/skiff1) ];
+          modules = [
+            (import ./hosts/firstfleet/galleon)
+          ];
           specialArgs = {
-            host = "skiff1";
+            host = "galleon";
+            inherit self inputs username;
+          };
+        };
+        cutter01 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            (import ./hosts/firstfleet/cutter01)
+          ];
+          specialArgs = {
+            host = "cutter01";
+            inherit self inputs username;
+          };
+        };
+        cutter02 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            (import ./hosts/firstfleet/cutter02)
+          ];
+          specialArgs = {
+            host = "cutter02";
             inherit self inputs username;
           };
         };

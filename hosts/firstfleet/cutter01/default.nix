@@ -10,10 +10,15 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "swix-skiff2"; # Define your hostname.
+  networking.hostName = "swix-cutter01"; # Define your hostname.
   # Pick only one of the below networking options.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  networking.interfaces.enp2s0f0.ipv4.addresses = [{
+    address = "192.168.1.11";
+    prefixLength = 24;
+  }];
 
   # Set your time zone.
   time.timeZone = "America/NewYork";

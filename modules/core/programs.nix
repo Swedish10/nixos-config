@@ -5,6 +5,8 @@
     neovim
     jq
     tmux
+    curl
+    wget
   ];
 }
 
