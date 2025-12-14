@@ -26,7 +26,7 @@
     serverAddr = "https://10.0.0.10:6443";
     token = "K10556a39d95c73e81d406fc764380227da3a67a9976584da02d588990478dd437a::server:e6747e4a3a232809012c19b5b2bd55ef";
     extraFlags = toString [
-      "--node-ip=10.0.0.11"
+      "--node-ip=10.0.0.12"
     ];
   };
 
