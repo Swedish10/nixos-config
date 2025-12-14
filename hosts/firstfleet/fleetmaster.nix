@@ -10,6 +10,9 @@
     enable = true;
     role = "server";
     extraFlags = [
+      "--node-ip=10.0.0.10"
+      "--advertise-address=10.0.0.10"
+      "--bind-address=10.0.0.10"
       "--write-kubeconfig-mode=644"
       "disable=servicelb"
       "--disable=traefik"

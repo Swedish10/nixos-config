@@ -3,7 +3,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware.nix
-      ../fleetnode.nix
       ../../../modules/core/default.server.nix
     ];
 
@@ -17,9 +16,19 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   networking.interfaces.enp2s0f0.ipv4.addresses = [{
-    address = "192.168.1.12";
+    address = "10.0.0.12";
     prefixLength = 24;
   }];
+
+  services.k3s = {
+    enable = true;
+    role = "agent";
+    serverAddr = "https://10.0.0.10:6443";
+    token = "K100a42eae3b99f8a4ae40a2ec4ad137c96d984d601429fc0bc220bcbe4c5789652::server::502c692de38dcc84fdcd666404eea7ef";
+    extraFlags = toString [
+      "--node-ip=10.0.0.11"
+    ];
+  };
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
