@@ -24,7 +24,7 @@
     enable = true;
     role = "agent";
     serverAddr = "https://10.0.0.10:6443";
-    token = "K100a42eae3b99f8a4ae40a2ec4ad137c96d984d601429fc0bc220bcbe4c5789652::server::502c692de38dcc84fdcd666404eea7ef";
+    token = "K10556a39d95c73e81d406fc764380227da3a67a9976584da02d588990478dd437a::server:e6747e4a3a232809012c19b5b2bd55ef";
     extraFlags = toString [
       "--node-ip=10.0.0.11"
     ];
