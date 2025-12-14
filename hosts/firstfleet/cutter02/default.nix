@@ -30,6 +30,12 @@
     ];
   };
 
+  services.rpcbind.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    nfs-utils
+  ];
+
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

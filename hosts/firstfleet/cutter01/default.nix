@@ -30,6 +30,12 @@
     ];
   };
 
+  services.rpcbind.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    nfs-utils
+  ];
+
   # Set your time zone.
   time.timeZone = "America/NewYork";
 

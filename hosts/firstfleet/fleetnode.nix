@@ -14,6 +14,4 @@
       "--node-ip=10.0.0.11"
     ];
   };
-
-  services.nfs.client.enable = true;
 }
