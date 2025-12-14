@@ -18,4 +18,13 @@
       "--disable=traefik"
     ];
   };
+
+  services.nfs.server = {
+    enable = true;
+    exports = ''
+      /data/k8s 10.0.0.0/24(rw,sync,no_subtree_check,no_root_squash)
+    '';
+  };
+
+  services.nfs.client.enable = true;
 }
