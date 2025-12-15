@@ -14,10 +14,10 @@
           [ ./../home/default.nix ]
         else if (host == "galleon") then
          [ ./../home/default.server.nix ]
-       # else if (host == "option3") then
-       #   [ ./../home/default.server.nix ]
-       # else if (host == "option4") then
-       #   [ ./../home/default.server.nix ]
+        else if (host == "cutter01") then
+          [ ./../home/default.server.nix ]
+        else if (host == "cutter02") then
+          [ ./../home/default.server.nix ]
        # else if (host == "option5") then
        #   [ ./../home/default.server.nix ]
        # else if (host == "option6") then
